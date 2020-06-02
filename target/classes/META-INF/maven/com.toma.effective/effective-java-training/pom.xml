@@ -4,4 +4,35 @@
   <artifactId>effective-java-training</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Effective_Java</name>
+  
+  <build>
+   <plugins>
+   <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.6.2</version>
+        <configuration>
+            <source>1.8</source>
+            <target>1.8</target>
+        </configuration>
+    </plugin>
+   </plugins>
+   </build>
+   
+   <dependencies>
+  
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>6.9.8</version>
+      <scope>test</scope>
+    </dependency>
+
+</dependencies>
+
+<properties>
+<skipTests>true</skipTests>
+<maven.build.timestamp.format>yyyyMMdd-HHmm</maven.build.timestamp.format>
+<buildTimestamp>${maven.build.timestamp}</buildTimestamp>
+<buildId>${buildType}${buildTimestamp}</buildId>
+</properties>
 </project>
